@@ -19,25 +19,28 @@
       <div class="card-body">
         <form>
           <div class="form-group">
-            <label for="exampleInputEmail1">Title</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <label for="note-title">Title</label>
+            <input type="email" class="form-control" id="noteTitle" aria-describedby="emailHelp"
               placeholder="Give your note a short, but memorable, name">
           </div>
           <div class="form-group">
-            <label for="note-body">Body</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+            <label for="note-body">Note content</label>
+            <textarea class="form-control" id="noteBody" rows="10"></textarea>
           </div>
+          <button id="submitNote" class="btn btn-success">Submit</button>
         </form>
       </div>
     </div>
     <div class="card mb-5">
       <div class="card-header">View your old notes here!</div>
-      <div id="noteData" class="card-body"></div>
+      <div id="noteDivs" class="card-body"></div>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="assets/js/showNotes.js"></script>
+  <script src="assets/js/postNotes.js"></script>
 </body>
 
 </html>
