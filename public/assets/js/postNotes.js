@@ -8,11 +8,10 @@ var note = {
   title: noteTitle.val().trim(),
   body: noteBody.val().trim()
 }
-if(!noteTitle || !noteBody){
-alert("It seems you didn't fill in either the title or content of your note.");
-return false;
+if(!note.body || !note.title){
+  alert("Save the trees. Don't waste paper - or database space.\n(read: Please make sure your note has both a title and content)")
 }
-
+else{
 $.ajax({
   method: "POST",
   url: "/api/notes",
@@ -22,6 +21,7 @@ $.ajax({
 
   location.reload()
 });
+}
 }
 
 $("#submitNote").on("click", postNotestoDB)

@@ -40,7 +40,6 @@ $(document).on("click", ".delete-btn", function(event){
     method: "DELETE",
     url: "/api/notes/" + noteID
   }).then(function(){
-  alert("DELETED!")
   location.reload()
   })
 }
