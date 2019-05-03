@@ -12,6 +12,7 @@ if(!noteTitle || !noteBody){
 alert("It seems you didn't fill in either the title or content of your note.");
 return false;
 }
+
 $.ajax({
   method: "POST",
   url: "/api/notes",
