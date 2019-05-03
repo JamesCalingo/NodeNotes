@@ -9,3 +9,7 @@ body{
 .header{
   background: coral
 }
+
+#nextNote{
+  color: lightgray
+}
