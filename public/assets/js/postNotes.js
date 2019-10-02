@@ -1,3 +1,5 @@
+// const Swal = require('sweetalert2');
+
 const postNotestoDB = function(event){
 event.preventDefault();
 
@@ -9,7 +11,10 @@ var note = {
   body: noteBody.val().trim()
 }
 if(!note.body || !note.title){
-  alert("Save the trees. Don't waste paper - or database space.\n(read: Please make sure your note has both a title and content)")
+  Swal.fire({
+    title: "Save the trees.",
+    text: "Don't waste paper - or database space.\n(read: Please make sure your note has both a title and content)",
+    type: "error"})
 }
 else{
 $.ajax({

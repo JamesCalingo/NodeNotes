@@ -1,3 +1,4 @@
+// CommonJS
 
 
 const getAndRenderNotes = function() {

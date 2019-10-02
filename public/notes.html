@@ -12,10 +12,14 @@
 </head>
 
 <body>
-  <div class="header text-center"><h2>NodeNotes</h2></div>
+  <div class="header text-center">
+    <h2>NodeNotes</h2>
+  </div>
   <div class="container">
     <div class="card mb-5 mt-5">
-      <div class="card-header"><h4>Make a new note here!</h4></div>
+      <div class="card-header">
+        <h4>Make a new note here!</h4>
+      </div>
       <div class="card-body">
         <form>
           <div class="form-group">
@@ -32,10 +36,12 @@
       </div>
     </div>
     <div class="card mb-5">
-      <div class="card-header"><h4>View your old notes here!</h4></div>
+      <div class="card-header">
+        <h4>View your old notes here!</h4>
+      </div>
       <div class="card-body">
         <h5 id="nextNote">Your next note will go here</h5>
-      <div id="noteDivs" ></div>
+        <div id="noteDivs"></div>
       </div>
     </div>
   </div>
@@ -43,6 +49,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
   <script src="assets/js/showNotes.js"></script>
   <script src="assets/js/postNotes.js"></script>
 </body>
