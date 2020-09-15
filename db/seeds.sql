@@ -1,4 +1,4 @@
-INSERT INTO notetaker_db (title, body)
+INSERT INTO notes (title, body)
 VALUES
 ("Stress test", "stress test"),
 ("Stress test", "stress test"),
@@ -99,4 +99,4 @@ VALUES
 ("Stress test", "stress test"),
 ("Stress test", "stress test"),
 ("Stress test", "stress test"),
-("Stress test", "stress test"),
+("Stress test", "stress test")
