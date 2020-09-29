@@ -22,7 +22,7 @@ const postNotestoDB = function (event) {
       url: '/api/notes',
       data: note
     }).then(function (data) {
-      Swal.fire('Note saved!')
+      alert("Note saved!")
 
       location.reload()
     })
