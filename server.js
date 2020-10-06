@@ -1,4 +1,7 @@
 var express = require('express')
+const cookieParser = require(cookie-parser)
+
+
 var apiRoutes = require('./routes/apiRoutes')
 var htmlRoutes = require('./routes/htmlRoutes')
 
@@ -11,6 +14,7 @@ var PORT = process.env.PORT || 3000
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('public'))
+app.use(cookieParser())
 
 // Sets up route middleware
 // Use the apiRoutes file for any apiRoutes
