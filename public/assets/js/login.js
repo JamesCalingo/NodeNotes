@@ -10,16 +10,16 @@ Swal.fire({
     const email = Swal.getPopup().querySelector('#email').value
     const password = Swal.getPopup().querySelector('#password').value
     if (!login || !password) {
-      Swal.showValidationMessage(`Please enter login and password`)
+      Swal.showValidationMessage(`Please enter your email and password`)
     }
     // else if (the credentials don't match data in the mySQL database){
     //   Swal.showValidationMessage("Login failed. check your username and password and then try again.")
     // }
-    return { login: login, password: password }
+    return { email: login, password: password }
   }
 }).then((result) => {
   Swal.fire(`
-    Login: ${result.value.login}
+    Login: ${result.value.email}
     Password: ${result.value.password}
-  `.trim())
+  `)
 })

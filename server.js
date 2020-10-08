@@ -1,8 +1,9 @@
-var express = require('express')
+const express = require('express')
 const cookieParser = require(cookie-parser)
 
 
-var apiRoutes = require('./routes/apiRoutes')
+const apiRoutesNotes = require('./routes/apiRoutes')
+const apiRoutesUsers = require('./routes/apiRoutesUsers')
 var htmlRoutes = require('./routes/htmlRoutes')
 
 // Tells node that we are creating an "express" server
@@ -19,7 +20,8 @@ app.use(cookieParser())
 // Sets up route middleware
 // Use the apiRoutes file for any apiRoutes
 // Use the htmlRoutes file for all other routes
-app.use(apiRoutes)
+app.use(apiRoutesNotes)
+app.use(apiRoutesUsers)
 app.use(htmlRoutes)
 
 app.listen(PORT, function () {

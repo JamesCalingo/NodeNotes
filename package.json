@@ -1,11 +1,11 @@
 {
-  "name": "NodeNotes",
+  "name": "nodeNotes",
   "version": "1.0.0",
   "description": "NodeNotes - Express and MySQL note taking app",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "start": "node server.js"
+    "start": "nodemon server"
   },
   "repository": {
     "type": "git",
