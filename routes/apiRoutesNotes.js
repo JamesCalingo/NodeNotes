@@ -1,28 +1,21 @@
-var router = require('express').Router()
-var connection = require('../db/connection')
+const db = require('../models')
+const withAuth = require('../middleware/authentication')
 
-router.get('/api/notes', function (req, res) {
-  connection.query('SELECT * FROM notes', function (err, notetaker_db) {
-    if (err) {
-      return res.json(err)
-    }
-    res.json(notetaker_db)
+module.exports = function(app){
+
+app.post('/api/notes', withAuth, function (req, res) {
+  req.body.userID = req.id
+  db.Notes.create(req.body).then(function(notetakerDB){
+    res.json(notetakerDB)
   })
-})
-
-router.post('/api/notes', function (req, res) {
-  connection.query('INSERT INTO notes SET ?', req.body, function (err, result) {
-    if (err) throw err
-
-    res.json(result)
   })
-})
 
-router.delete('/api/notes/:id', function (req, res) {
+
+app.delete('/api/notes/:id', function (req, res) {
   connection.query('DELETE FROM notes WHERE id = ?', [req.params.id], function (err, result) {
     if (err) throw err
     res.json(result)
   })
 })
 
-module.exports = router
+}

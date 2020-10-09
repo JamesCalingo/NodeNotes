@@ -1,6 +1,5 @@
 const express = require("express");
 
-
 // Tells node that we are creating an "express" server
 var app = express();
 // Sets an initial port. We"ll use this later in our listener
