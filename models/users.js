@@ -2,21 +2,21 @@ var bcrypt = require('bcrypt')
 
 module.exports = function (sequelize, DataTypes) {
   var Users = sequelize.define('users', {
-    email: {
+    name: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      match: [/.+@.+\../, 'A valid email address must be used!']
+      allowNull: false
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8]
+        len: [8],
+        unique: true,
+      match: [/.+@.+\../, 'A valid email address must be used!']
       }
     }
   })
-}
+
 
 Users.prototype.validPassword = function (password) {
   const document = this
@@ -42,3 +42,4 @@ Users.associate = function(models) {
 }
 
 return Users
+}

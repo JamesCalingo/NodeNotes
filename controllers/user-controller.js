@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const {users: Users} = require('../models')
-const promiseHandler = require('../promiseHandler')
+const promiseHandler = require('../utils/promiseHandler')
 require(dotenv).config()
 
 const secret = process.env.secret
