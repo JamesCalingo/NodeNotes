@@ -6,10 +6,21 @@ body{
   background: coral
 }
 
-.header{
-  background: coral
+.card {
+  max-height: 800px;
+}
+
+.notes {
+  overflow-y: scroll;
+}
+
+.card-header {
+  text-align: center;
 }
 
 #nextNote{
-  color: lightgray
+  color: lightgray;
+  
+  text-align: center;
+  margin: 50px 0
 }
