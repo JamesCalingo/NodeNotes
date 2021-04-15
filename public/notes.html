@@ -14,44 +14,49 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="card col-md-6 mb-5 mt-md-3">
-        <div class="card-header">
-          <h4>Make a new note here!</h4>
-        </div>
-        <div class="card-body">
-          <form>
-            <div class="form-group">
-              <label for="note-title">Title</label>
-              <input type="input" class="form-control" id="noteTitle" aria-describedby="emailHelp"
-                placeholder="Give your note a short, but memorable, name">
-            </div>
-            <div class="form-group">
-              <label for="note-body">Note content</label>
-              <textarea class="form-control" id="noteBody" rows="10"></textarea>
-            </div>
-            <button id="submitNote" class="btn btn-success">Submit</button>
-          </form>
+      <div class="col-md-5 mb-5 mt-md-3">
+        <div class="card">
+          <div class="card-header">
+            <h4>Make a new note here!</h4>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="note-title">Title</label>
+                <input type="input" class="form-control" id="noteTitle" aria-describedby="emailHelp"
+                  placeholder="Give your note a short, but memorable, name">
+              </div>
+              <div class="form-group">
+                <label for="note-body">Note content</label>
+                <textarea class="form-control" id="noteBody" rows="10"></textarea>
+              </div>
+              <button id="submitNote" class="btn btn-success">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="card notes col-md-6 mb-5 mt-md-3">
-        <div class="card-header">
-          <h4>View your old notes here!</h4>
-        </div>
-        <div class="card-body">
-          <h5 id="nextNote">Your next note will go here</h5>
-          <div id="noteDivs"></div>
+
+      <div class="col-md-7 mb-5 mt-3">
+        <div class="card">
+          <div class="card-header">
+            <h4>View your old notes here!</h4>
+          </div>
+          <div class="notes card-body">
+            <h5 id="nextNote">Your next note will go here</h5>
+            <div id="noteDivs"></div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
-    <script src="assets/js/showNotes.js"></script>
-    <script src="assets/js/postNotes.js"></script>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+  <script src="assets/js/showNotes.js"></script>
+  <script src="assets/js/postNotes.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-// const Swal = require('sweetalert2');
 
 const postNotestoDB = function (event) {
   event.preventDefault()
