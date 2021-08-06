@@ -7,8 +7,8 @@ const secret = process.env.secret
 
 const createUser =  (req, res) => {
   console.log(req.body)
-  const {email, password} = req.body
-  Users.create({email, password})
+  const {email} = req.body
+  Users.create({email})
   .then(userDB => res.json(userDB))
   .catch(err => {
     res.json(err)
@@ -17,7 +17,7 @@ const createUser =  (req, res) => {
 }
 
 const loginUser = async (req, res) => {
-  const {email, password} = req.body
+  const {email} = req.body
 
 const [userErr, userInfo] = await handle(Users.findOne({
   where: {email: email}
