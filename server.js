@@ -2,7 +2,7 @@ const express = require("express");
 
 // Tells node that we are creating an "express" server
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 4000;
 
 const db = require("./models");
 
