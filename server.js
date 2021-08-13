@@ -6,7 +6,7 @@ var app = express()
 // Sets an initial port. We"ll use this later in our listener
 var PORT = process.env.PORT || 4000
 
-const models = require("./models")
+const notesModel = require("./models/note")
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }))

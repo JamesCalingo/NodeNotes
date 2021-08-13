@@ -1,5 +1,7 @@
-module.exports = function(sequelize, DataTypes) {
-  var Notes = sequelize.define("notes", {
+const { Sequelize, DataTypes} = require("sequelize")
+const sequelize = new Sequelize("mysql::memory:")
+ 
+  const Note = sequelize.define("Note", {
     title: {
       type: DataTypes.STRING,
     },
@@ -8,4 +10,5 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     }
   })
-}
+
+  console.log(Note === sequelize.models.Note)
