@@ -1,4 +1,4 @@
-INSERT INTO notetaker_db (title, body)
+INSERT INTO nodenotes (title, body)
 VALUES
 ("Stress test", "stress test"),
 ("Stress test", "stress test"),
