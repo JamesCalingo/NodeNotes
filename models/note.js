@@ -12,3 +12,4 @@ const sequelize = new Sequelize("mysql::memory:")
   })
 
   console.log(Note === sequelize.models.Note)
+  module.exports = Note
