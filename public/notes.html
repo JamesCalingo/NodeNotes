@@ -13,13 +13,21 @@
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-md-5 mb-5 mt-md-3">
+
+      <div id="notes" class="card">
+        <div class="card-header">
+          <h4>My notes</h4>
+        </div>
+        <div class="notes card-body">
+          <div id="noteDiv"></div>
+        </div>
+      </div>
+     
         <div class="card">
           <div class="card-header">
-            <h4>Make a new note here!</h4>
+            <h4>Write new note</h4>
           </div>
-          <div class="card-body">
+          <div id="write-note" class="card-body">
             <form>
               <div class="form-group">
                 <label for="noteTitle">Title</label>
@@ -34,20 +42,9 @@
             </form>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-7 mb-5 mt-3">
-        <div class="card">
-          <div class="card-header">
-            <h4>View your old notes here!</h4>
-          </div>
-          <div class="notes card-body">
-            <h5 id="nextNote">Your next note will go here</h5>
-            <div id="noteDivs"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+
     
   </div>
 

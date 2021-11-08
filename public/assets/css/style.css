@@ -11,12 +11,36 @@ body{
   border-bottom: 3px solid black
 }
 
-#nextNote{
-  color: lightgray;
-  
-  text-align: center;
-  margin: 50px 0
+#write-note{
+  position: relative
 }
+
+#noteDiv {
+  display:block;
+}
+
+.sticky-note {
+  background: yellowgreen;
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px black;
+
+  margin: 25px;
+  padding: 10px;
+  font-family: 'Gloria Hallelujah', sans-serif;
+  overflow-y: scroll;
+  resize: none
+}
+
+.sticky-note::-webkit-scrollbar {
+  background: yellowgreen;
+}
+
+.note-title {
+  text-align: center;
+}
+
 
 @media only screen and (min-width: 768px) {
   .notes {
@@ -25,4 +49,11 @@ body{
   .card {
     max-height: 700px;
   }
+
+  #noteDiv {
+    display:flex;
+    flex-wrap: wrap;
+  }
+
+  
 }
