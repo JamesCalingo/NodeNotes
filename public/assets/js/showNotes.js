@@ -1,9 +1,22 @@
 // CommonJS
 
-const getAndRenderNotes = function () {
+
+
+function getData () {
   $.ajax({
     method: "GET",
-    url: "/api/notes"
+    url: "/api/notes",
+  }).then(function (data) {
+    console.log(data)
+  })
+}
+
+getData()
+
+const renderNotes = function () {
+  $.ajax({
+    method: "GET",
+    url: "/api/notes",
   }).then(function (data) {
     var notesArray = [];
 
@@ -12,7 +25,7 @@ const getAndRenderNotes = function () {
       var dateTime = moment(note.created_at).format(" h:mm a on MM/DD/YYYY");
 
       var $newNote = $("<div>");
-      $newNote.addClass("border-top pt-2");
+      $newNote.addClass("sticky-note");
       var $noteTitle = $("<h5>").text(note.title);
       var $noteBody = $("<p>").text(note.body);
       var $noteTime = $("<p>").text(`Created at ${dateTime}`);
@@ -25,19 +38,19 @@ const getAndRenderNotes = function () {
       notesArray.push($newNote);
     }
 
-    $("#noteDivs").append(notesArray.reverse());
+    $("#noteDiv").append(notesArray.reverse());
   });
 };
 
-getAndRenderNotes();
+renderNotes();
 
 $(document).on("click", ".delete-btn", function (event) {
   event.preventDefault();
   var noteID = $(this).attr("data-id");
-  var c = confirm(
+  var confirm = confirm(
     "Are you ABSOLUTELY sure you want to do this? Your note will be gone forever, and you won't be able to get it back..."
   );
-  if (c === false) {
+  if (confirm === false) {
     event.preventDefault();
   } else {
     $.ajax({

@@ -23,9 +23,9 @@ body{
   overflow-y: scroll
 }
 
-.sticky-note::-webkit-scrollbar {
+/* .sticky-note::-webkit-scrollbar {
   background: yellowgreen;
-}
+} */
 
 .note-title {
   text-align: center;
