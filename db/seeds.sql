@@ -1,4 +1,4 @@
-INSERT INTO nodenotes (title, body)
+INSERT INTO notes (title, body)
 VALUES
 ("Stress test", "stress test"),
 ("Stress test", "stress test"),

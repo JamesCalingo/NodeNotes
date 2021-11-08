@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS nodenotes;
-CREATE DATABASE nodenotes;
+DROP DATABASE IF EXISTS sticky-nodes;
+CREATE DATABASE sticky-nodes;
 
-USE nodenotes;
+USE sticky-nodes;
 
 CREATE TABLE notes (
   id INT NOT NULL AUTO_INCREMENT,
