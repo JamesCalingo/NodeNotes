@@ -47,10 +47,10 @@ renderNotes();
 $(document).on("click", ".delete-btn", function (event) {
   event.preventDefault();
   var noteID = $(this).attr("data-id");
-  var confirm = confirm(
+  var confirmDelete = confirm(
     "Are you ABSOLUTELY sure you want to do this? Your note will be gone forever, and you won't be able to get it back..."
   );
-  if (confirm === false) {
+  if (confirmDelete === false) {
     event.preventDefault();
   } else {
     $.ajax({
