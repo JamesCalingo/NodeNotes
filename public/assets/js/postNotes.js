@@ -1,3 +1,9 @@
+$("#new-note").on("click", function() {
+  $("#write-note").css(  {
+    "visibility": "visible",
+  })
+})
+
 const postNotestoDB = function (event) {
   event.preventDefault();
 
