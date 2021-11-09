@@ -1,5 +1,5 @@
-# NodeNotes
-NodeNotes - Express and MySQL note taking app
+# StickyNodes
+StickyNodes (formerly known as NodeNotes) - Express and MySQL note taking app
 
 # How it Works
 This app can be used to create simple notes that are then stored in a MySQL database. There is also the option to delete notes from the database. <br/>
