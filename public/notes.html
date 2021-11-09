@@ -12,22 +12,27 @@
 </head>
 
 <body>
-  <div class="container">
+  <div>
 
-      <div id="notes" class="card">
+      <div id="notes">
         <div class="card-header">
           <h4>My notes</h4>
         </div>
         <div class="notes card-body">
-          <div id="noteDiv"></div>
+          <button id="new-note" class="btn btn-info">Write new note</button>
+          <div id="noteDiv">
+
+          </div>
+
+          
         </div>
       </div>
      
-        <div class="card">
+        <div id="write-note" class="card">
           <div class="card-header">
             <h4>Write new note</h4>
           </div>
-          <div id="write-note" class="card-body">
+          <div class="card-body">
             <form>
               <div class="form-group">
                 <label for="noteTitle">Title</label>
@@ -39,6 +44,7 @@
                 <textarea class="form-control" id="noteBody" rows="10"></textarea>
               </div>
               <button id="submitNote" class="btn btn-success">Submit</button>
+              <button id="cancel" class="btn btn-danger">Cancel</button>
             </form>
           </div>
         </div>
@@ -52,7 +58,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
   <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
   <script src="assets/js/showNotes.js"></script>
   <script src="assets/js/postNotes.js"></script>

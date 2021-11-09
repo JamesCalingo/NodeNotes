@@ -1,53 +1,41 @@
 // CommonJS
 
-
-
-function getData () {
+function getData() {
   $.ajax({
     method: "GET",
     url: "/api/notes",
   }).then(function (data) {
-    console.log(data)
-  })
+    renderNotes(data);
+  });
 }
 
-getData()
+function renderNotes(arr) {
+  arr.forEach((note) => {
+    const dateTime = moment(note.created_at).format("MM/DD/YYYY h:mm a");
 
-const renderNotes = function () {
-  $.ajax({
-    method: "GET",
-    url: "/api/notes",
-  }).then(function (data) {
-    var notesArray = [];
+    const $newNote = $("<div>");
+    $newNote.addClass("sticky-note");
+    const $noteTitle = $("<h5>").text(note.title);
+    const $noteBody = $("<p>").text(note.body);
+    const $noteTime = $("<p>").text(dateTime);
+    const $del = $("<button>").text("Delete this Note");
+    $del.addClass("btn-danger btn delete-btn");
+    $del.attr("data-id", note.id);
 
-    for (var i = 0; i < data.length; i++) {
-      var note = data[i];
-      var dateTime = moment(note.created_at).format(" h:mm a on MM/DD/YYYY");
+    $newNote.append($noteTitle, $noteBody, $noteTime, $del);
 
-      var $newNote = $("<div>");
-      $newNote.addClass("sticky-note");
-      var $noteTitle = $("<h5>").text(note.title);
-      var $noteBody = $("<p>").text(note.body);
-      var $noteTime = $("<p>").text(`Created at ${dateTime}`);
-      var $del = $("<button>").text("Delete this Note");
-      $del.addClass("btn-danger btn mb-3 delete-btn");
-      $del.attr("data-id", note.id);
-
-      $newNote.append($noteTitle, $noteBody, $noteTime, $del);
-
-      notesArray.push($newNote);
-    }
-
-    $("#noteDiv").append(notesArray.reverse());
+    $("#noteDiv").prepend($newNote);
   });
-};
+}
 
-renderNotes();
+getData();
+
+// renderNotes();
 
 $(document).on("click", ".delete-btn", function (event) {
   event.preventDefault();
-  var noteID = $(this).attr("data-id");
-  var confirmDelete = confirm(
+  const noteID = $(this).attr("data-id");
+  const confirmDelete = confirm(
     "Are you ABSOLUTELY sure you want to do this? Your note will be gone forever, and you won't be able to get it back..."
   );
   if (confirmDelete === false) {
