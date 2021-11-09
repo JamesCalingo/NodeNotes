@@ -1,8 +1,8 @@
-body{
+body {
   background: burlywood
 }
 
-.jumbotron{
+.jumbotron {
   background: coral
 }
 
@@ -11,12 +11,12 @@ body{
   border-bottom: 3px solid black
 }
 
-#write-note{
+#write-note {
   position: relative
 }
 
 #noteDiv {
-  display:block;
+  display: block;
 }
 
 .sticky-note {
@@ -42,18 +42,19 @@ body{
 }
 
 
+#noteDiv {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 @media only screen and (min-width: 768px) {
   .notes {
     overflow-y: scroll;
   }
+
   .card {
     max-height: 700px;
   }
 
-  #noteDiv {
-    display:flex;
-    flex-wrap: wrap;
-  }
-
-  
 }

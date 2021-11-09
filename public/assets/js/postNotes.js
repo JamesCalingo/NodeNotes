@@ -1,31 +1,30 @@
-
 const postNotestoDB = function (event) {
-  event.preventDefault()
+  event.preventDefault();
 
-  var noteTitle = $('#noteTitle')
-  var noteBody = $('#noteBody')
+  const noteTitle = $("#noteTitle");
+  const noteBody = $("#noteBody");
 
-  var note = {
+  const note = {
     title: noteTitle.val().trim(),
-    body: noteBody.val().trim()
-  }
+    body: noteBody.val().trim(),
+  };
   if (!note.body || !note.title) {
     Swal.fire({
-      title: 'Save the trees.',
+      title: "Save the trees.",
       text: "Don't waste paper - or database space.\n(read: Please make sure your note has both a title and content)",
-      type: 'error'
-    })
+      type: "error",
+    });
   } else {
     $.ajax({
-      method: 'POST',
-      url: '/api/notes',
-      data: note
+      method: "POST",
+      url: "/api/notes",
+      data: note,
     }).then(function (data) {
-      alert("Note saved!")
+      alert("Note saved!");
 
-      location.reload()
-    })
+      location.reload();
+    });
   }
-}
+};
 
-$('#submitNote').on('click', postNotestoDB)
+$("#submitNote").on("click", postNotestoDB);
