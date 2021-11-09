@@ -4,6 +4,13 @@ $("#new-note").on("click", function() {
   })
 })
 
+$("#cancel").on("click", function(event) {
+  event.preventDefault()
+  $("#write-note").css(  {
+    "visibility": "hidden",
+  })
+})
+
 const postNotestoDB = function (event) {
   event.preventDefault();
 
